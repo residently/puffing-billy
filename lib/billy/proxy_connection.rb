@@ -53,7 +53,8 @@ module Billy
       @ssl = url
       @parser = Http::Parser.new(self)
       send_data("HTTP/1.0 200 Connection established\r\nProxy-agent: Puffing-Billy/0.0.0\r\n\r\n")
-      start_tls(certificate_chain(url))
+      # start_tls(certificate_chain(url))
+      start_tls()
     end
 
     def handle_request
